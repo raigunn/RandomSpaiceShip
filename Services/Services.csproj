@@ -44,17 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IJsonDemoServices.cs" />
+    <Compile Include="Logic\Directions.cs" />
+    <Compile Include="Logic\IMoveLogic.cs" />
     <Compile Include="IRestDemoServices.cs" />
+    <Compile Include="Logic\IShootLogic.cs" />
+    <Compile Include="Logic\RandomMoveLogic.cs" />
+    <Compile Include="Logic\RandomShootLogic.cs" />
+    <Compile Include="Models\Requests\GameState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PingResponse.cs" />
+    <Compile Include="Models\Responses\PingResponse.cs" />
     <Compile Include="RestDemoServices.cs" />
     <Compile Include="Routing.cs" />
-    <Compile Include="TurnResponse.cs" />
+    <Compile Include="Models\Responses\TurnResponse.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

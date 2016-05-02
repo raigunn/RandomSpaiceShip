@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
+using Services.Logic;
+using Services.Models.Requests;
+using Services.Models.Responses;
 
 
 namespace Services
@@ -27,12 +30,27 @@ namespace Services
 			return response;
 		}
 
-		public TurnResponse Turn()
+		public TurnResponse Turn(GameState gameState)
 		{
-			var turn = new TurnResponse();
-			turn.MoveDirection = "1";
-			turn.ShootDirection = "2";
-			return turn;
+			var turnResponse = new TurnResponse();
+
+			int move = GetMoveDirection(new RandomMoveLogic(gameState.GridSize, gameState.Players[0]));
+			int shoot = GetShootDirection(new RandomShootLogic(gameState.GridSize, gameState.Players[0]));
+
+			turnResponse.MoveDirection = move;
+			turnResponse.ShootDirection = shoot;
+			return turnResponse;
+		}
+
+
+		public int GetMoveDirection(IMoveLogic iMoveLogic)
+		{
+			return iMoveLogic.Direction;
+		}
+
+		public int GetShootDirection(IShootLogic iShootLogic)
+		{
+			return iShootLogic.Direction;
 		}
 	}
 }
