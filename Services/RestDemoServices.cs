@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
+using System.Threading;
 using Services.Logic;
 using Services.Models.Requests;
 using Services.Models.Responses;
@@ -14,16 +15,11 @@ using Services.Models.Responses;
 
 namespace Services
 {
-	[ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Single, IncludeExceptionDetailInFaults = true)]
+	[ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple, IncludeExceptionDetailInFaults = true)]
 	[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
 	public class RestDemoServices : IRestDemoServices
 	{
-		public string Ping(string word)
-		{
-			return "Ping " + word;
-		}
-
-		public PingResponse Json()
+		public PingResponse Ping()
 		{
 			var response = new PingResponse();
 			response.Ping = "argg, you got me";
@@ -39,6 +35,8 @@ namespace Services
 
 			turnResponse.MoveDirection = move;
 			turnResponse.ShootDirection = shoot;
+			Thread.Sleep(2000);
+			Console.WriteLine("default 1: " + move + " : " + shoot);
 			return turnResponse;
 		}
 

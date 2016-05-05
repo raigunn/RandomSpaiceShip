@@ -14,13 +14,13 @@ namespace Services
 	[ServiceContract(Name = "RestDemoServices")]
   public interface IRestDemoServices
   {
-		[OperationContract]
-		[WebGet(UriTemplate = Routing.GetClientRoute, BodyStyle = WebMessageBodyStyle.Bare)]
-		string Ping(string word);
+		//[OperationContract]
+		//[WebGet(UriTemplate = Routing.GetClientRoute, BodyStyle = WebMessageBodyStyle.Bare)]
+		//string Ping(string word);
 
 		[OperationContract]
 		[WebGet(UriTemplate = Routing.GetJsonRoute, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
-		PingResponse Json();
+		PingResponse Ping();
 
 
 		[OperationContract]
