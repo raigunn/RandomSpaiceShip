@@ -17,9 +17,9 @@ namespace Services.Logic
 		{
 			List<int> availableDirections = new List<int>();
 			if (x > 0) availableDirections.Add(3);
-			if (x < gridWidth - 1) availableDirections.Add(1);
+			if (x < gridWidth - 2) availableDirections.Add(1);
 			if (y > 0) availableDirections.Add(0);
-			if (y < gridHeight - 1) availableDirections.Add(2);
+			if (y < gridHeight - 2) availableDirections.Add(2);
 			return availableDirections;
 		}
 

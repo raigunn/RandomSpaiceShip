@@ -30,8 +30,8 @@ namespace Services
 		{
 			var turnResponse = new TurnResponse();
 
-			int move = GetMoveDirection(new RandomMoveLogic(gameState.GridSize, gameState.Players[0]));
-			int shoot = GetShootDirection(new RandomShootLogic(gameState.GridSize, gameState.Players[0]));
+			int move = GetMoveDirection(new RandomMoveLogic(gameState.GridSize, gameState.Players[0].Position));
+			int shoot = GetShootDirection(new RandomShootLogic(gameState.GridSize, gameState.Players[0].Position));
 
 			turnResponse.MoveDirection = move;
 			turnResponse.ShootDirection = shoot;

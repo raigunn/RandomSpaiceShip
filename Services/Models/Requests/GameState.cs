@@ -15,6 +15,6 @@ namespace Services.Models.Requests
 		[DataMember]
 		public int[] GridSize { get; set; }
 		[DataMember]
-		public List<int[]> Players { get; set; }
+		public List<Player> Players { get; set; }
 	}
 }

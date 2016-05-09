@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Services.Models.Requests;
 
 namespace Services.Logic
 {
@@ -16,13 +17,13 @@ namespace Services.Logic
 		private readonly List<int> _availableDirections;
 
 		// up = 0, right = 1, down = 2, left = 3
-		public RandomMoveLogic(int[] gridSize, int[] currentPosition)
+		public RandomMoveLogic(int[] gridSize, Position currentPosition)
 		{
 			// convenience
 			_gridWidth = gridSize[0];
 			_gridHeight = gridSize[1];
-			_x = currentPosition[0];
-			_y = currentPosition[1];
+			_x = currentPosition.X;
+			_y = currentPosition.Y;
 			_availableDirections = Directions.Available(_gridWidth, _gridHeight, _x, _y);
 		}
 
