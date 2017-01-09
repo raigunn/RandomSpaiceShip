@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services
+namespace GameServices
 {
 	public static class Routing
 	{
-		//public const string GetClientRoute = "/Client/{word}";
-		public const string GetJsonRoute = "/Ping";
+		public const string GetPingRoute = "/Ping";
 		public const string GetTurnRoute = "/Turn";
+		public const string GetRegisterRoute = "/Register/{id}";
 	}
 }

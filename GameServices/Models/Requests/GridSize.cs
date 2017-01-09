@@ -5,16 +5,19 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.Models.Requests
+namespace GameServices.Models.Requests
 {
 	[DataContract]
-	public class GameState
+	public class GridSize
 	{
 		[DataMember]
-		public int Round { get; set; }
+		public int Cols { get; set; }
 		[DataMember]
-		public int[] GridSize { get; set; }
-		[DataMember]
-		public List<Player> Players { get; set; }
+		public int Rows { get; set; }
+		public GridSize(int cols, int rows)
+		{
+			Cols = cols;
+			Rows = rows;
+		}
 	}
 }

@@ -51,9 +51,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Services\Services.csproj">
+    <ProjectReference Include="..\GameServices\GameServices.csproj">
       <Project>{a12fd554-d5c0-4f58-87ca-e29fe16ef569}</Project>
-      <Name>Services</Name>
+      <Name>GameServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

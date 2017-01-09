@@ -7,8 +7,8 @@
     <ProjectGuid>{A12FD554-D5C0-4F58-87CA-E29FE16EF569}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Services</RootNamespace>
-    <AssemblyName>Services</AssemblyName>
+    <RootNamespace>GameServices</RootNamespace>
+    <AssemblyName>GameServices</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,18 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\PlayerExt.cs" />
+    <Compile Include="Extensions\PositionExt.cs" />
+    <Compile Include="Extensions\TurnResponseExt.cs" />
     <Compile Include="Logic\Directions.cs" />
     <Compile Include="Logic\IMoveLogic.cs" />
-    <Compile Include="IRestDemoServices.cs" />
+    <Compile Include="IRestGameServices.cs" />
     <Compile Include="Logic\IShootLogic.cs" />
     <Compile Include="Logic\RandomMoveLogic.cs" />
     <Compile Include="Logic\RandomShootLogic.cs" />
     <Compile Include="Models\Requests\GameState.cs" />
+    <Compile Include="Models\Requests\GridSize.cs" />
     <Compile Include="Models\Requests\Player.cs" />
     <Compile Include="Models\Requests\Position.cs" />
+    <Compile Include="Models\Responses\RegisterResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Responses\PingResponse.cs" />
-    <Compile Include="RestDemoServices.cs" />
+    <Compile Include="RestGameServices.cs" />
     <Compile Include="Routing.cs" />
     <Compile Include="Models\Responses\TurnResponse.cs" />
   </ItemGroup>

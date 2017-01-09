@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{A12FD554-D5C0-4F58-87CA-E29FE16EF569}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameServices", "GameServices\GameServices.csproj", "{A12FD554-D5C0-4F58-87CA-E29FE16EF569}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleRestService", "..\ConsoleRestService\ConsoleRestService\ConsoleRestService.csproj", "{68EA3126-53CB-43D0-9EA0-5E9A5F56EF0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomSpaiceShip", "RandomSpaiceShip\RandomSpaiceShip.csproj", "{68EA3126-53CB-43D0-9EA0-5E9A5F56EF0D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameServicesTests", "GameServicesTests\GameServicesTests.csproj", "{66521081-CC47-4AFF-AE2C-15C34A17E95A}"
 EndProject

@@ -1,4 +1,4 @@
-namespace Services.Logic
+namespace GameServices.Logic
 {
 	public interface IMoveLogic	
 	{

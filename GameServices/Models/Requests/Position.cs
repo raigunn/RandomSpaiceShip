@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.Models.Requests
+namespace GameServices.Models.Requests
 {
 	[DataContract]
 	public class Position
@@ -14,17 +14,11 @@ namespace Services.Models.Requests
 		public int X { get; set; }
 		[DataMember]
 		public int Y { get; set; }
-		[DataMember]
-		public int MaxX { get; set; }
-		[DataMember]
-		public int MaxY { get; set; }
 
-		public Position(int x, int y, int maxX, int maxY)
+		public Position(int x, int y)
 		{
 			X = x;
 			Y = y;
-			MaxX = maxX;
-			MaxY = maxY;
 		}
 	}
 }

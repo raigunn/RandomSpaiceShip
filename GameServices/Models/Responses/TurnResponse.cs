@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Services.Models.Responses
+namespace GameServices.Models.Responses
 {
 	[DataContract]
 	public class TurnResponse
@@ -9,5 +9,7 @@ namespace Services.Models.Responses
 		public int MoveDirection { get; set; }
 		[DataMember]
 		public int ShootDirection { get; set; }
+		[DataMember]
+		public string PlayerId { get; set; }
 	}
 }

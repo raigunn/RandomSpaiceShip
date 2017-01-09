@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameServices.Models.Requests;
 
-namespace Services.Logic
+namespace GameServices.Logic
 {
 	public static class Directions
 	{
@@ -32,6 +33,16 @@ namespace Services.Logic
 			{ // synchronize
 				return random.Next(min, max);
 			}
+		}
+
+
+		public static Position ConvertDirectionToPosition(int direction, Position p)
+		{
+			if (direction == 1) p.X++;
+			if (direction == 3) p.X--;
+			if (direction == 0) p.Y--;
+			if (direction == 2) p.Y++;
+			return p;
 		}
 	}
 }
